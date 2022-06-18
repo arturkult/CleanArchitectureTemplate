@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="Entities" />
+        <Folder Include="Exceptions" />
+        <Folder Include="SimpleAggregate\Entities" />
+        <Folder Include="SimpleAggregate\Events" />
+        <Folder Include="SimpleAggregate\ValueObjects" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MediatR" Version="10.0.1" />
+    </ItemGroup>
+
+</Project>

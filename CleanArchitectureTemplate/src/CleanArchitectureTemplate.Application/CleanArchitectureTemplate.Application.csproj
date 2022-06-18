@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="11.0.3" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.0.3" />
+        <PackageReference Include="Mapster" Version="7.3.0" />
+        <PackageReference Include="MediatR" Version="10.0.1" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="Microsoft.Extensions.Configuration.Abstractions">
+            <HintPath>C:\Users\Artur\.nuget\packages\microsoft.extensions.configuration.abstractions\7.0.0-preview.5.22301.12\lib\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\CleanArchitectureTemplate.Domain\CleanArchitectureTemplate.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="SimpleAggregate\Commands" />
+        <Folder Include="SimpleAggregate\Queries" />
+        <Folder Include="Validators" />
+    </ItemGroup>
+
+</Project>

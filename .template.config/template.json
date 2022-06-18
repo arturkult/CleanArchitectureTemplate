@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "JasonTaylorDev",
+  "classifications": [
+    "Web",
+    "Clean Architecture"
+  ],
+  "name": "Clean Architecture Solution",
+  "description": "This is a test.",
+  "identity": "Clean.Architecture.Solution.CSharp",
+  "groupIdentity": "Clean.Architecture.Solution",
+  "shortName": "ca-clean-sln",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "symbols": {
+    "create-sln": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "true"
+    }
+  },
+  "sourceName": "CleanArchitectureTemplate",
+  "preferNameDirectory": true,
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!create-sln)",
+          "exclude": [
+            "CleanArchitectureTemplate.sln"
+          ]
+        },
+        {
+          "source": "./",
+          "target": "./",
+          "exclude": [
+            "README.md",
+            "**/[Bb]in/**",
+            "**/[Oo]bj/**",
+            ".template.config/**/*",
+            ".vs/**/*",
+            "**/*.filelist",
+            "**/*.user",
+            "**/*.lock.json",
+            "**/.git/**",
+            "*.nuspec",
+            "**/node_modules/**",
+            ".idea/**/*"
+          ]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "path": "CleanArchitectureTemplate/src/CleanArchitectureTemplate.Application/CleanArchitectureTemplate.Application.csproj"
+    },
+    {
+      "path": "CleanArchitectureTemplate/src/CleanArchitectureTemplate.Infrastructure/CleanArchitectureTemplate.Infrastructure.csproj"
+    },
+    {
+      "path": "CleanArchitectureTemplate/src/CleanArchitectureTemplate.Domain/CleanArchitectureTemplate.Domain.csproj"
+    },
+    {
+      "path": "CleanArchitectureTemplate/src/CleanArchitectureTemplate.Web/CleanArchitectureTemplate.Web.csproj"
+    },
+    {
+      "path": "CleanArchitectureTemplate/test/CleanArchitectureTemplate.Application.UnitTests/CleanArchitectureTemplate.Application.UnitTests.csproj"
+    },
+    {
+      "path": "CleanArchitectureTemplate/test/CleanArchitectureTemplate.Infrastructure.Tests/CleanArchitectureTemplate.Infrastructure.Tests.csproj"
+    },
+    {
+      "path": "CleanArchitectureTemplate/test/CleanArchitectureTemplate.Domain.UnitTests/CleanArchitectureTemplate.Domain.UnitTests.csproj"
+    },
+    {
+      "path": "CleanArchitectureTemplate/test/CleanArchitectureTemplate.Web.IntegrationTests/CleanArchitectureTemplate.Web.IntegrationTests.csproj"
+    }
+  ],
+  "postActions": [
+    {
+      "condition": "(!create-sln)",
+      "manualInstructions": [],
+      "actionId": "D396686C-DE0E-4DE6-906D-291CD29FC5DE"
+    }
+  ]
+}
